@@ -20,6 +20,5 @@ def get_ai4i_dataset():
         X = X.reshape(-1, len(X_df.columns))  # Reshape to (num_samples, num_features)
     # Extract targets
     y = ai4i_2020_predictive_maintenance_dataset.data.targets.to_numpy()
-    print(f"X shape: {X.shape}, y shape: {y.shape}")  # Debugging statement
     X_norm, y_norm = normalization(X,y)
     return X_norm, y_norm
